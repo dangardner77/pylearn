@@ -1,1 +1,16 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+</head>
+<body>
+    <textarea id="editor" rows="10" cols="50">print("Hello, World!")</textarea>
+    <button onclick="runCode()">Run</button>
+    <pre id="output"></pre>
+    <script src="script.js"></script>
+</body>
+</html>
