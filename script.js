@@ -1,6 +1,18 @@
+let pyodide = null;
+
+async function loadPyodideAndPackages() {
+    pyodide = await loadPyodide();
+    console.log("Pyodide loaded.");
+}
+
+loadPyodideAndPackages();
+
 async function runCode() {
-    let pyodide = await loadPyodide();
     let code = document.getElementById("editor").value;
-    let output = await pyodide.runPythonAsync(code);
-    document.getElementById("output").innerText = output;
+    try {
+        let output = await pyodide.runPythonAsync(code);
+        document.getElementById("output").innerText = output;
+    } catch (error) {
+        document.getElementById("output").innerText = error;
+    }
 }
