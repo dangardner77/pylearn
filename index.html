@@ -8,9 +8,13 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
 </head>
 <body>
+    <h1>Interactive Python Editor</h1>
     <textarea id="editor" rows="10" cols="50">print("Hello, World!")</textarea>
     <button onclick="runCode()">Run</button>
-    <pre id="output"></pre>
+    <div id="output-container">
+        <h2>Output:</h2>
+        <pre id="output"></pre>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
